@@ -1,9 +1,15 @@
 <section>
-    @for(p of persons(); track p.login.uuid)
-    {
-        <app-person-card [person]="p" />
-    } @empty {
-        <p>Chargement de l'annuaire en cours...</p>
-    }
+    <div id="person-list-filter-container">
+        <label>Recherche : </label>
+        <input #searchFilter [value]="filter()" (input)="filter.set(searchFilter.value)">
+    </div>
+    <div id="person-list-list-container">
+        @for(p of visiblePersons(); track p.login.uuid)
+        {
+            <app-person-card [person]="p" />
+        } @empty {
+            <p>Chargement de l'annuaire en cours...</p>
+        }
+    </div>
 </section>
 
