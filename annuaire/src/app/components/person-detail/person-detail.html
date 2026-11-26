@@ -1,0 +1,26 @@
+<article>
+    <a [routerLink]="['/']">Retour à l'annuaire</a>
+    @if(person(); as p)
+    {
+        <img [src]="p.picture.large">
+        <section>
+            <div id="person-detail-fields-labels">
+                <p>Âge</p>
+                <p>Email</p>
+                <p>Téléphone</p>
+                <p>Portable</p>
+                <p>Ville</p>
+            </div>
+            <div id="person-detail-fields">
+                <p>{{ p.dob.age }}</p>
+                <p>{{ p.email }}</p>
+                <p>{{ p.phone }}</p>
+                <p>{{ p.cell }}</p>
+                <p>{{ p.location.city }}</p>
+            </div>
+        </section>
+    }@else 
+    {
+        <p>Personne introuvable</p>
+    }
+</article>

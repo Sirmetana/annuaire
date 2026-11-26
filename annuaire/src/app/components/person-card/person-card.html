@@ -1,6 +1,6 @@
 
 <section>
-    <img [src]="person().picture.medium">
-    <p>{{ person().name.first }} {{ person().name.last }}</p>
+    <a [routerLink]="['/personnes', person().login.uuid]"><img [src]="person().picture.medium"></a>
+    <a [routerLink]="['/personnes', person().login.uuid]"><p>{{ person().name.first }} {{ person().name.last }}</p></a>
     <p>{{ person().location.city }}</p>
 </section>

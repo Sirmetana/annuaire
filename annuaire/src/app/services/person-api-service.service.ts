@@ -10,7 +10,7 @@ export class PersonApiService {
 
     async getAll(): Promise<Person[]>
     {
-        const response = await firstValueFrom(this.http.get<PersonsResponse>(`${this.url}?limit=12`));
+        const response = await firstValueFrom(this.http.get<PersonsResponse>(`${this.url}`));
         return response.results;
     }
 }
