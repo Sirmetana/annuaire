@@ -1,0 +1,9 @@
+<section>
+    @for(p of persons(); track p.login.uuid)
+    {
+        <app-person-card [person]="p" />
+    } @empty {
+        <p>Chargement de l'annuaire en cours...</p>
+    }
+</section>
+

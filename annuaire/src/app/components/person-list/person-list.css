@@ -1,0 +1,10 @@
+section
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-top: 2vh;
+
+}
